@@ -10,13 +10,12 @@ export default class ContentVerticalTimeline extends React.Component {
          <div className="container pt-section" data-name="Timeline" id="ptsection-six">
 
             <div className="text-center">
-               <h3 className="font-accident-one-bold uppercase">My Professional Timeline</h3>
-               <h5 className="font-accident-one-bold title-light uppercase hovercolor">Working hard and making the success</h5>
+               <h3 className="font-accident-one-bold uppercase">Trayectoria profesional</h3>
+               <h5 className="font-accident-one-bold title-light uppercase hovercolor">Pequeños pasos que relatan esferzo y sacrificio</h5>
                <div className="dividewhite4"></div>
                <p className="small">
-               Customize your website as you want using different colors and 100% free fonts. Build it from pieces and
-               blocks as simple as Lego. <br/>
-               Electronic Website Template is fully responsive, looks and works perfect on any device.
+                Cada proceso equivale a un éxito, nuestro proposito, <br />
+              afianzar un bagaje profesional que afiance la confianza de nuestros clientes.
                </p>
             </div>
 

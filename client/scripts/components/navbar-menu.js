@@ -1,40 +1,70 @@
 import React from 'react';
-import { Link } from 'react-router';
+import {Link as LinkRouter} from 'react-router';
+import {Link as LinkScroll} from 'react-scroll';
 
 export default class NavbarMenu extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <div className="content-wrap">
-        <header id="header-wrapper-mp" className="head-overlay sticky-menu-light">
-           <div className="sticky-header header-dark sticky-overlay nobg" role="navigation">
-              <div className="container mp-nav">
-                 <div id="site-title"><a href="index.html"><h1 className="font-accident-one-normal">
-                    <i className="flaticon-avatar36"></i>Fletcher</h1></a>
-                 </div>
-                 <nav id="main-menu" className="nav site-navigation primary-navigation">
-                    <ul className="sf-menu clearfix" id="example">
-                       <li className="m-desktop menu-item active"><a href="#home">Inicio</a></li>
-                       <li className="m-desktop menu-item"><Link to="blog">Blog</Link></li>
-                       <li className="m-desktop menu-item"><a href="#details">Sobre Mí</a></li>
-                       <li className="m-desktop menu-item"><a href="#portfolio">Portfolio</a></li>
-                       <li className="m-desktop menu-item"><a href="#timeline-vertical">Trayectoria</a></li>
-                       <li>
-                          <div className="menu-button nav-icon" id="open-button">
-                             <div></div>
-                          </div>
-                       </li>
-                    </ul>
-                 </nav>
+	constructor(props) {
+		super(props);
 
-              </div>
+		this.state = {
+			links: [
+				{
+					_id: 1,
+					label: 'Inicio',
+					anchor: '#home'
+				}, {
+					_id: 2,
+					label: 'Blog',
+					anchor: '/blog'
+				}, {
+					_id: 3,
+					label: 'Sobre Mí',
+					anchor: '#details'
+				}, {
+					_id: 4,
+					label: 'Portfolio',
+					anchor: '#portfolio'
+				}, {
+					_id: 5,
+					label: 'Trayectoria',
+					anchor: '#timeline-vertical'
+				}
+			]
+		};
+	}
+	render() {
+		return (
+			<div className="content-wrap">
+				<header id="header-wrapper-mp" className="head-overlay sticky-menu-light">
+					<div className="sticky-header header-dark sticky-overlay nobg" role="navigation">
+						<div className="container mp-nav">
+							<div id="site-title">
+								<a href="index.html">
+									<h1 className="font-accident-one-normal">
+										<i className="flaticon-avatar36"></i>Paloma SF</h1>
+								</a>
+							</div>
+							<nav id="main-menu" className="nav site-navigation primary-navigation">
+								<ul className="sf-menu clearfix" id="example">
+									{this.state.links.map(link => <li key={link._id} className="m-desktop menu-item active">
+										{(/^\#/).test(link.anchor)
+											? <LinkScroll to={link.anchor.substring(1)} spy={true} smooth={true} duration={500}>{link.label}</LinkScroll>
+											: <LinkRouter to={link.anchor}>{link.label}</LinkRouter>}
+									</li>)}
+									<li>
+										<div className="menu-button nav-icon" id="open-button">
+											<div></div>
+										</div>
+									</li>
+								</ul>
+							</nav>
 
-           </div>
+						</div>
 
-        </header>
-      </div>
-    );
-  }
+					</div>
+
+				</header>
+			</div>
+		);
+	}
 }

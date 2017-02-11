@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, Link, browserHistory} from 'react-router'
 
+import Main from './routes/main';
 import Home from './routes/home';
 import Blog from './routes/blog';
 import Post from './routes/post';
@@ -15,7 +16,7 @@ class App extends React.Component {
 		return (
 			<div>
 				<Router history={browserHistory}>
-					<Route path="/" component={Home}>
+					<Route path="/" component={Main}>
 						<Route path="home" component={Home}/>
 						<Route path="blog" component={Blog}>
 							<Route path="/post/:id" component={Post}/>

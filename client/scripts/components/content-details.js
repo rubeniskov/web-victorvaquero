@@ -25,13 +25,12 @@ export default class ContentDetails extends React.Component {
          <div className="container pt-section" data-name="Details" id="ptsection-two">
 
             <div className="container text-center">
-               <h3 className="font-accident-one-bold uppercase fontcolor-regular">who am i</h3>
-               <h5 className="font-accident-one-bold title-light uppercase hovercolor">Working hard and making the success</h5>
+               <h3 className="font-accident-one-bold uppercase fontcolor-regular">Sobre mí</h3>
+               <h5 className="font-accident-one-bold title-light uppercase hovercolor">Trabajando duro hasta alcanzar el éxito</h5>
                <div className="dividewhite4"></div>
                <p className="small fontcolor-regular">
-                  Customize your website as you want using different colors and 100% free fonts. Build it from pieces and
-                  blocks as simple as Lego. <br />
-                  Electronic Website Template is fully responsive, looks and works perfect on any device.
+                  Nuestra prioridad como abogados son nuestros clientes, <br/> por eso mismo aportamos el máximo de nuestros esfuerzos
+                  en cada uno de los casos para ofrecer un trato directo y transparente.
                </p>
             </div>
 
