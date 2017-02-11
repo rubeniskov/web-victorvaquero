@@ -15,11 +15,10 @@ export default class NavbarMenu extends React.Component {
                  </div>
                  <nav id="main-menu" className="nav site-navigation primary-navigation">
                     <ul className="sf-menu clearfix" id="example">
-                       <li className="m-desktop menu-item active"><a href="#home">Home</a></li>
-                       <li className="m-desktop menu-item"><a href="#details">Details</a></li>
+                       <li className="m-desktop menu-item active"><a href="#home">Inicio</a></li>
+                       <li className="m-desktop menu-item"><a href="#details">Sobre Mí</a></li>
                        <li className="m-desktop menu-item"><a href="#portfolio">Portfolio</a></li>
-                       <li className="m-desktop menu-item"><a href="#timeline-vertical">Timeline</a></li>
-                       <li className="m-desktop menu-item"><a href="https://wrapbootstrap.com/theme/fletcher-personal-landing-page-html-WB029022K?ref=neuethemes" target="_blank">Buy</a></li>
+                       <li className="m-desktop menu-item"><a href="#timeline-vertical">Trayectoria</a></li>
                        <li>
                           <div className="menu-button nav-icon" id="open-button">
                              <div></div>
