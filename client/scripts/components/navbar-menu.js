@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 export default class NavbarMenu extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ export default class NavbarMenu extends React.Component {
                  <nav id="main-menu" className="nav site-navigation primary-navigation">
                     <ul className="sf-menu clearfix" id="example">
                        <li className="m-desktop menu-item active"><a href="#home">Inicio</a></li>
+                       <li className="m-desktop menu-item"><Link to="blog">Blog</Link></li>
                        <li className="m-desktop menu-item"><a href="#details">Sobre Mí</a></li>
                        <li className="m-desktop menu-item"><a href="#portfolio">Portfolio</a></li>
                        <li className="m-desktop menu-item"><a href="#timeline-vertical">Trayectoria</a></li>

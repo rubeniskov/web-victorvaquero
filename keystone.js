@@ -73,6 +73,8 @@ keystone.set('locals', {
 	editable: keystone.content.editable
 });
 
+keystone.set('baseUrl', (keystone.get('env') == 'production') ? 'https://www.palomasafe.com/' : 'http://localhost:3000/');
+
 keystoneRestApi(keystone);
 // restful.expose({
 // 	Post: true
