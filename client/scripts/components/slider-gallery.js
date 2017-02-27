@@ -176,7 +176,7 @@ export default class SliderGallery extends React.Component {
                           data-responsive_offset="on"
                           data-fontsize="['90','70','60','40']"
                           data-lineheight="['120','100','90','80']"
-                          style={{'zIndex': 2}}>Paloma Sánchez Fernández
+                          style={{'zIndex': 2}}>Victor Vaquero
                      </div>
                      <div className="tp-caption cap-subtitle font-accident-two-bold tp-resizeme rs-parallaxlevel-1"
                           data-x="center"

@@ -7,8 +7,8 @@ const
 
 keystone.init({
 
-	'name': 'palomasafe.com',
-	'brand': 'palomasafe',
+	'name': 'victorvaquero.com',
+	'brand': 'victorvaquero',
 	'port': process.env.PORT || 3000,
 	'host': process.env.NODE_ENV === 'production' ? '0.0.0.0' : process.env.IP || '127.0.0.1',
 	'admin path': 'admin',
@@ -73,7 +73,7 @@ keystone.set('locals', {
 	editable: keystone.content.editable
 });
 
-keystone.set('baseUrl', (keystone.get('env') == 'production') ? 'https://www.palomasafe.com/' : 'http://localhost:3000/');
+keystone.set('baseUrl', (keystone.get('env') == 'production') ? 'https://www.victorvaquero.com/' : 'http://localhost:3000/');
 
 keystoneRestApi(keystone);
 // restful.expose({

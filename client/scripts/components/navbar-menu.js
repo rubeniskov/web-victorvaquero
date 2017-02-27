@@ -41,7 +41,7 @@ export default class NavbarMenu extends React.Component {
 							<div id="site-title">
 								<a href="index.html">
 									<h1 className="font-accident-one-normal">
-										<i className="flaticon-avatar36"></i>Paloma SF</h1>
+										<i className="flaticon-avatar36"></i>Victor Vaquero</h1>
 								</a>
 							</div>
 							<nav id="main-menu" className="nav site-navigation primary-navigation">
