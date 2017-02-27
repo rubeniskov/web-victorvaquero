@@ -11,7 +11,9 @@ keystone.init({
 	'brand': 'palomasafe',
 	'port': process.env.PORT || 3000,
 	'host': process.env.NODE_ENV === 'production' ? '0.0.0.0' : process.env.IP || '127.0.0.1',
-	// 'admin path': 'admin',
+	'admin path': 'admin',
+	'wysiwyg additional plugins': 'images',
+  'wysiwyg additional buttons': 'images',
 	'less': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
@@ -70,6 +72,8 @@ keystone.set('locals', {
 	utils: keystone.utils,
 	editable: keystone.content.editable
 });
+
+keystone.set('baseUrl', (keystone.get('env') == 'production') ? 'https://www.palomasafe.com/' : 'http://localhost:3000/');
 
 keystoneRestApi(keystone);
 // restful.expose({

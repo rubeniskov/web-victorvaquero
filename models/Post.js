@@ -3,21 +3,21 @@ var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
 var Post = new keystone.List('Post', {
-  owner: 'admin',
-  group: 'juas',
 	autokey: {
 		from: 'name',
 		path: 'key',
 		unique: true
 	},
 	rest: {
-      query: {
-          where: ['state', 'published'],
-          sort: ['-publishedDate'],
-          populate: ['author', '-password']
-      },
-      path: "/post"
-  }
+		query: {
+			where: [
+				'state', 'published'
+			],
+			sort: ['-publishedDate'],
+			populate: ['author', '-password']
+		},
+		path: "/post"
+	}
 });
 
 Post.add({
@@ -53,13 +53,13 @@ Post.add({
 			type: Types.Markdown,
 			wysiwyg: true,
 			height: 400
-		},
+		}
 	},
 	categories: {
 		type: Types.Relationship,
 		ref: 'PostCategory',
 		many: true
-	},
+	}
 });
 
 // Post.restHooks = {
@@ -85,11 +85,11 @@ Post.schema.virtual('content.full').get(function() {
 	return this.content.extended || this.content.brief;
 });
 
-Post.relationship({
-	path: 'comments',
-	ref: 'PostComment',
-	refPath: 'post'
+Post.schema.virtual('url.full').get(function() {
+	return keystone.get('baseUrl') + 'blog/post/' + this.slug;
 });
+
+Post.relationship({path: 'comments', ref: 'PostComment', refPath: 'post'});
 
 Post.track = true;
 Post.defaultColumns = 'name, state|20%, author|20%, publishedDate|20%';
